@@ -1,0 +1,8 @@
+<!doctype html><meta charset="utf-8"><script>
+const user='sf-test';
+localStorage.setItem('studyforge_local_active_user',user);
+localStorage.setItem('studyforge_local_demo_users',JSON.stringify({[user]:{username:user}}));
+localStorage.setItem('studyforge_profile_'+user,JSON.stringify({displayName:'Test Student',grade:'Class 12',board:'CBSE',dailyStudyMinutes:240}));
+localStorage.setItem('studyforge_v2_state_'+user,JSON.stringify({subjects:[{id:'p',name:'Physics',color:'blue',icon:'P'},{id:'c',name:'Chemistry',color:'mint',icon:'C'},{id:'m',name:'Mathematics',color:'orange',icon:'M'}],topics:[{id:'tp1',subjectId:'p',title:'Mechanics',completed:false},{id:'tc1',subjectId:'c',title:'Solutions',completed:false},{id:'tm1',subjectId:'m',title:'Calculus',completed:false}],tasks:[{id:'t1',title:'Mechanics',subject:'p',dueDate:new Date().toISOString().slice(0,10),minutes:80,done:false},{id:'t2',title:'Solutions',subject:'c',dueDate:new Date().toISOString().slice(0,10),minutes:80,done:false},{id:'t3',title:'Calculus',subject:'m',dueDate:new Date().toISOString().slice(0,10),minutes:80,done:false}],dailyPlans:{},dailyStudyMinutes:240,priorityOrder:[],xp:0,completed:[],theme:'dark'}));
+location.replace('dashboard.html');
+</script>
